@@ -1,0 +1,97 @@
+swagger: '2.0'
+
+info:
+  version: "1.0.0"
+  title: httpbin partial service description
+
+schemes:
+  - https
+
+host: httpbin.org
+
+consumes:
+  - application/json
+  - application/xml
+  - text/plain
+  - application/octet-stream
+
+produces:
+  - application/json
+
+paths:
+  /post:
+    post:
+      operationId: postResponseWithoutBody
+      responses:
+        201:
+          description: 'Created'
+  /get/collection:
+    get:
+      operationId: getFakeCollection
+      responses:
+        200:
+          schema:
+            type: array
+            items:
+              type: object
+  /get/{aPath}:
+    get:
+      operationId: dumpGetRequest
+      summary: Dump a request into the reqponse body
+      parameters:
+        - name: aPath
+          in: path
+          type: string
+          required: true
+          default: test
+        - name: aDate
+          in: query
+          type: string
+          format: date-time
+        - name: aSlug
+          in: query
+          type: string
+          default: test
+        - name: aBody
+          in: body
+          schema:
+            type: object
+        - name: anHeader
+          in: header
+          type: string
+          default: Test
+      responses:
+        200:
+          description: Successful response
+          schema:
+            $ref: "#/definitions/RequestDump"
+
+definitions:
+  RequestDump:
+    id: RequestDump
+    type: object
+    required:
+      - origin
+      - url
+    additionalProperties: false
+    properties:
+      args:
+        type: object
+      data:
+        type: string
+      files:
+        type: object
+      form:
+        type: object
+      json:
+        type: object
+      headers:
+        type: object
+        additionalProperties:
+          type: string
+      origin:
+        type: string
+        format: ipv4
+      url:
+        type: string
+        format: uri
