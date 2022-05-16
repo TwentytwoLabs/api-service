@@ -1,0 +1,2171 @@
+{
+  "_links": {
+    "self": {
+      "href": "/drivers?foo=bar&page=1&bar=baz"
+    },
+    "first": {
+      "href": "/drivers?foo=bar&page=1&bar=baz"
+    },
+    "last": {
+      "href": "/drivers?foo=bar&page=9&bar=baz"
+    },
+    "next": {
+      "href": "/drivers?foo=bar&page=2&bar=baz"
+    },
+    "item": [
+      {
+        "href": "/drivers/MDYyMjkyMDg1NQ=="
+      },
+      {
+        "href": "/drivers/MDY4MTEwODE2Mw=="
+      },
+      {
+        "href": "/drivers/MDcyNzg2MTUwMg=="
+      },
+      {
+        "href": "/drivers/MDY4NTAwNTc4Ng=="
+      },
+      {
+        "href": "/drivers/MDcyMTU2OTgxNw=="
+      },
+      {
+        "href": "/drivers/MDc4MTE1MjE1Mw=="
+      },
+      {
+        "href": "/drivers/MDcyMzc3ODAxMg=="
+      },
+      {
+        "href": "/drivers/MDY0OTIwNDQ5Nw=="
+      },
+      {
+        "href": "/drivers/MDYzMjQzNDEzMw=="
+      },
+      {
+        "href": "/drivers/MDc4ODgzNTAwNA=="
+      },
+      {
+        "href": "/drivers/MDc5OTQ0MTU5MA=="
+      },
+      {
+        "href": "/drivers/MDYxNDgxNTU4MA=="
+      },
+      {
+        "href": "/drivers/MDc0ODg3Mzk1NA=="
+      },
+      {
+        "href": "/drivers/MDY3OTI3NzQ3Mw=="
+      },
+      {
+        "href": "/drivers/MDc2NjM3MTU5MQ=="
+      },
+      {
+        "href": "/drivers/MDc0MTcyMzg2Ng=="
+      },
+      {
+        "href": "/drivers/MDcwMTE0NzIyMg=="
+      },
+      {
+        "href": "/drivers/MDcwNjcyMzA2NA=="
+      },
+      {
+        "href": "/drivers/MDcxMTM1OTg0OQ=="
+      },
+      {
+        "href": "/drivers/MDc2NjIxMTI3NA=="
+      },
+      {
+        "href": "/drivers/MDY4NDkxNzI0MQ=="
+      },
+      {
+        "href": "/drivers/MDY5NDIzMjQ3MQ=="
+      },
+      {
+        "href": "/drivers/MDY5NjAxMjA1NA=="
+      },
+      {
+        "href": "/drivers/MDc0MTUxNzUyNw=="
+      },
+      {
+        "href": "/drivers/MDc5MDkzNDk3Nw=="
+      },
+      {
+        "href": "/drivers/MDc4MzM4NDM3OQ=="
+      },
+      {
+        "href": "/drivers/MDYwNDcwODI4MA=="
+      },
+      {
+        "href": "/drivers/MDc3NDk5NTM2MQ=="
+      },
+      {
+        "href": "/drivers/MDY3Mzc2NzY4NA=="
+      },
+      {
+        "href": "/drivers/MDY3MTEyMDAwOA=="
+      }
+    ]
+  },
+  "totalItems": 269,
+  "itemsPerPage": 30,
+  "_embedded": {
+    "item": [
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDYyMjkyMDg1NQ=="
+          },
+          "company": {
+            "href": "/companies/aff97e9d-f87b-390b-b4cd-bafd58719ed0"
+          },
+          "vehicle": {
+            "href": "/vehicles/WFgwMDBYWA=="
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/aff97e9d-f87b-390b-b4cd-bafd58719ed0"
+              }
+            },
+            "name": "Renard Marin S.A.R.L.",
+            "clientRef": "aff97e9d-f87b-390b-b4cd-bafd58719ed0",
+            "taxId": "783514803596521",
+            "kind": "independent",
+            "code": null,
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          },
+          "vehicle": {
+            "_links": {
+              "self": {
+                "href": "/vehicles/WFgwMDBYWA=="
+              },
+              "model": {
+                "href": "/models/a6"
+              },
+              "color": {
+                "href": "/colors/black"
+              }
+            },
+            "_embedded": {
+              "model": {
+                "_links": {
+                  "self": {
+                    "href": "/models/a6"
+                  },
+                  "brand": {
+                    "href": "/brands/audi"
+                  }
+                },
+                "_embedded": {
+                  "brand": {
+                    "_links": {
+                      "self": {
+                        "href": "/brands/audi"
+                      }
+                    },
+                    "title": "Audi",
+                    "slug": "audi",
+                    "dateCreated": "2022-05-10T10:43:59+02:00",
+                    "dateModified": "2022-05-10T10:43:59+02:00"
+                  }
+                },
+                "title": "A6",
+                "slug": "a6",
+                "dateModelRelease": "2022-05-10T10:44:00+02:00",
+                "dateCreated": "2022-05-10T10:44:00+02:00",
+                "dateModified": "2022-05-10T10:44:00+02:00"
+              },
+              "color": {
+                "_links": {
+                  "self": {
+                    "href": "/colors/black"
+                  }
+                },
+                "title": "Black",
+                "slug": "black",
+                "dateCreated": "2022-05-10T10:43:59+02:00",
+                "dateModified": "2022-05-10T10:43:59+02:00"
+              }
+            },
+            "vehicleIdentificationNumber": "XX000XX",
+            "vehicleIdentificationNumberFormatted": "XX000XX",
+            "uuid": "WFgwMDBYWA==",
+            "fuelType": "hybrid",
+            "dateModelCreation": "1998-05-18T00:00:00+02:00",
+            "modelGeneration": "lorem ipsum",
+            "plv": true,
+            "warranty": "unknown",
+            "photo": null
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/toulouse"
+                }
+              },
+              "title": "Toulouse",
+              "slug": "toulouse"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Julie",
+        "familyName": "Gillet",
+        "uuid": "MDYyMjkyMDg1NQ==",
+        "phone": "0622920855",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDY4MTEwODE2Mw=="
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lille"
+                }
+              },
+              "title": "Lille",
+              "slug": "lille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Georges",
+        "familyName": "Martine",
+        "uuid": "MDY4MTEwODE2Mw==",
+        "phone": "0681108163",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "blocked": 1,
+          "unconfirmed": 1,
+          "password_valid": 1,
+          "email_pending_validation": 1
+        },
+        "vehicleType": "taxi",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDcyNzg2MTUwMg=="
+          },
+          "company": {
+            "href": "/companies/HSOIBQTUE"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/HSOIBQTUE"
+              }
+            },
+            "name": "Guillet",
+            "clientRef": "HSOIBQTUE",
+            "taxId": "141777127615995",
+            "kind": "capacity",
+            "code": "GUI-995-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/marseille"
+                }
+              },
+              "title": "Marseille",
+              "slug": "marseille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Denise",
+        "familyName": "Perrin",
+        "uuid": "MDcyNzg2MTUwMg==",
+        "phone": "0727861502",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDY4NTAwNTc4Ng=="
+          },
+          "company": {
+            "href": "/companies/HSOIBQTUE"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/HSOIBQTUE"
+              }
+            },
+            "name": "Guillet",
+            "clientRef": "HSOIBQTUE",
+            "taxId": "141777127615995",
+            "kind": "capacity",
+            "code": "GUI-995-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/toulouse"
+                }
+              },
+              "title": "Toulouse",
+              "slug": "toulouse"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Michel",
+        "familyName": "Garnier",
+        "uuid": "MDY4NTAwNTc4Ng==",
+        "phone": "0685005786",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "unblocked": 1,
+          "unconfirmed": 1,
+          "password_valid": 1,
+          "email_pending_validation": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDcyMTU2OTgxNw=="
+          },
+          "company": {
+            "href": "/companies/HSOIBQTUE"
+          },
+          "vehicle": {
+            "href": "/vehicles/WFgxMTFYWA=="
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/HSOIBQTUE"
+              }
+            },
+            "name": "Guillet",
+            "clientRef": "HSOIBQTUE",
+            "taxId": "141777127615995",
+            "kind": "capacity",
+            "code": "GUI-995-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          },
+          "vehicle": {
+            "_links": {
+              "self": {
+                "href": "/vehicles/WFgxMTFYWA=="
+              },
+              "model": {
+                "href": "/models/a6"
+              },
+              "color": {
+                "href": "/colors/black"
+              }
+            },
+            "_embedded": {
+              "model": {
+                "_links": {
+                  "self": {
+                    "href": "/models/a6"
+                  },
+                  "brand": {
+                    "href": "/brands/audi"
+                  }
+                },
+                "_embedded": {
+                  "brand": {
+                    "_links": {
+                      "self": {
+                        "href": "/brands/audi"
+                      }
+                    },
+                    "title": "Audi",
+                    "slug": "audi",
+                    "dateCreated": "2022-05-10T10:43:59+02:00",
+                    "dateModified": "2022-05-10T10:43:59+02:00"
+                  }
+                },
+                "title": "A6",
+                "slug": "a6",
+                "dateModelRelease": "2022-05-10T10:44:00+02:00",
+                "dateCreated": "2022-05-10T10:44:00+02:00",
+                "dateModified": "2022-05-10T10:44:00+02:00"
+              },
+              "color": {
+                "_links": {
+                  "self": {
+                    "href": "/colors/black"
+                  }
+                },
+                "title": "Black",
+                "slug": "black",
+                "dateCreated": "2022-05-10T10:43:59+02:00",
+                "dateModified": "2022-05-10T10:43:59+02:00"
+              }
+            },
+            "vehicleIdentificationNumber": "XX111XX",
+            "vehicleIdentificationNumberFormatted": "XX111XX",
+            "uuid": "WFgxMTFYWA==",
+            "fuelType": "hybrid",
+            "dateModelCreation": "1998-05-18T00:00:00+02:00",
+            "modelGeneration": "lorem ipsum",
+            "plv": true,
+            "warranty": "unknown",
+            "photo": null
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lyon"
+                }
+              },
+              "title": "Lyon",
+              "slug": "lyon"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Leroy",
+        "familyName": "Emmanuel",
+        "uuid": "MDcyMTU2OTgxNw==",
+        "phone": "0721569817",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "taxi",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc4MTE1MjE1Mw=="
+          },
+          "company": {
+            "href": "/companies/TXUWBVMQK"
+          },
+          "vehicle": {
+            "href": "/vehicles/WFgyMjJYWA=="
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/TXUWBVMQK"
+              }
+            },
+            "name": "Didier SARL",
+            "clientRef": "TXUWBVMQK",
+            "taxId": "828128930194104",
+            "kind": "capacity",
+            "code": "DID-104-001",
+            "dateCreated": "2022-05-10T10:44:01+02:00",
+            "dateModified": "2022-05-10T10:44:01+02:00"
+          },
+          "vehicle": {
+            "_links": {
+              "self": {
+                "href": "/vehicles/WFgyMjJYWA=="
+              },
+              "model": {
+                "href": "/models/a6"
+              },
+              "color": {
+                "href": "/colors/black"
+              }
+            },
+            "_embedded": {
+              "model": {
+                "_links": {
+                  "self": {
+                    "href": "/models/a6"
+                  },
+                  "brand": {
+                    "href": "/brands/audi"
+                  }
+                },
+                "_embedded": {
+                  "brand": {
+                    "_links": {
+                      "self": {
+                        "href": "/brands/audi"
+                      }
+                    },
+                    "title": "Audi",
+                    "slug": "audi",
+                    "dateCreated": "2022-05-10T10:43:59+02:00",
+                    "dateModified": "2022-05-10T10:43:59+02:00"
+                  }
+                },
+                "title": "A6",
+                "slug": "a6",
+                "dateModelRelease": "2022-05-10T10:44:00+02:00",
+                "dateCreated": "2022-05-10T10:44:00+02:00",
+                "dateModified": "2022-05-10T10:44:00+02:00"
+              },
+              "color": {
+                "_links": {
+                  "self": {
+                    "href": "/colors/black"
+                  }
+                },
+                "title": "Black",
+                "slug": "black",
+                "dateCreated": "2022-05-10T10:43:59+02:00",
+                "dateModified": "2022-05-10T10:43:59+02:00"
+              }
+            },
+            "vehicleIdentificationNumber": "XX222XX",
+            "vehicleIdentificationNumberFormatted": "XX222XX",
+            "uuid": "WFgyMjJYWA==",
+            "fuelType": "hybrid",
+            "dateModelCreation": "1998-05-18T00:00:00+02:00",
+            "modelGeneration": "lorem ipsum",
+            "plv": true,
+            "warranty": "unknown",
+            "photo": null
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/paris"
+                }
+              },
+              "title": "Paris",
+              "slug": "paris"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Goncalves",
+        "familyName": "Antoine",
+        "uuid": "MDc4MTE1MjE1Mw==",
+        "phone": "0781152153",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:01+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDcyMzc3ODAxMg=="
+          },
+          "company": {
+            "href": "/companies/MLJGVIWNX"
+          },
+          "vehicle": {
+            "href": "/vehicles/WFgzMzNYWA=="
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/MLJGVIWNX"
+              }
+            },
+            "name": "Nguyen Raynaud S.A.S.",
+            "clientRef": "MLJGVIWNX",
+            "taxId": "567121468809117",
+            "kind": "capacity",
+            "code": "NGU-117-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          },
+          "vehicle": {
+            "_links": {
+              "self": {
+                "href": "/vehicles/WFgzMzNYWA=="
+              },
+              "model": {
+                "href": "/models/a6"
+              },
+              "color": {
+                "href": "/colors/black"
+              }
+            },
+            "_embedded": {
+              "model": {
+                "_links": {
+                  "self": {
+                    "href": "/models/a6"
+                  },
+                  "brand": {
+                    "href": "/brands/audi"
+                  }
+                },
+                "_embedded": {
+                  "brand": {
+                    "_links": {
+                      "self": {
+                        "href": "/brands/audi"
+                      }
+                    },
+                    "title": "Audi",
+                    "slug": "audi",
+                    "dateCreated": "2022-05-10T10:43:59+02:00",
+                    "dateModified": "2022-05-10T10:43:59+02:00"
+                  }
+                },
+                "title": "A6",
+                "slug": "a6",
+                "dateModelRelease": "2022-05-10T10:44:00+02:00",
+                "dateCreated": "2022-05-10T10:44:00+02:00",
+                "dateModified": "2022-05-10T10:44:00+02:00"
+              },
+              "color": {
+                "_links": {
+                  "self": {
+                    "href": "/colors/black"
+                  }
+                },
+                "title": "Black",
+                "slug": "black",
+                "dateCreated": "2022-05-10T10:43:59+02:00",
+                "dateModified": "2022-05-10T10:43:59+02:00"
+              }
+            },
+            "vehicleIdentificationNumber": "XX333XX",
+            "vehicleIdentificationNumberFormatted": "XX333XX",
+            "uuid": "WFgzMzNYWA==",
+            "fuelType": "hybrid",
+            "dateModelCreation": "1998-05-18T00:00:00+02:00",
+            "modelGeneration": "lorem ipsum",
+            "plv": true,
+            "warranty": "unknown",
+            "photo": null
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/toulouse"
+                }
+              },
+              "title": "Toulouse",
+              "slug": "toulouse"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Ramos",
+        "familyName": "Thierry",
+        "uuid": "MDcyMzc3ODAxMg==",
+        "phone": "0723778012",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDY0OTIwNDQ5Nw=="
+          },
+          "company": {
+            "href": "/companies/IWXUZLGBJ"
+          },
+          "vehicle": {
+            "href": "/vehicles/WFg0NDRYWA=="
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/IWXUZLGBJ"
+              }
+            },
+            "name": "Bernier",
+            "clientRef": "IWXUZLGBJ",
+            "taxId": "016352015919018",
+            "kind": "capacity",
+            "code": "BER-018-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          },
+          "vehicle": {
+            "_links": {
+              "self": {
+                "href": "/vehicles/WFg0NDRYWA=="
+              },
+              "model": {
+                "href": "/models/a6"
+              },
+              "color": {
+                "href": "/colors/black"
+              }
+            },
+            "_embedded": {
+              "model": {
+                "_links": {
+                  "self": {
+                    "href": "/models/a6"
+                  },
+                  "brand": {
+                    "href": "/brands/audi"
+                  }
+                },
+                "_embedded": {
+                  "brand": {
+                    "_links": {
+                      "self": {
+                        "href": "/brands/audi"
+                      }
+                    },
+                    "title": "Audi",
+                    "slug": "audi",
+                    "dateCreated": "2022-05-10T10:43:59+02:00",
+                    "dateModified": "2022-05-10T10:43:59+02:00"
+                  }
+                },
+                "title": "A6",
+                "slug": "a6",
+                "dateModelRelease": "2022-05-10T10:44:00+02:00",
+                "dateCreated": "2022-05-10T10:44:00+02:00",
+                "dateModified": "2022-05-10T10:44:00+02:00"
+              },
+              "color": {
+                "_links": {
+                  "self": {
+                    "href": "/colors/black"
+                  }
+                },
+                "title": "Black",
+                "slug": "black",
+                "dateCreated": "2022-05-10T10:43:59+02:00",
+                "dateModified": "2022-05-10T10:43:59+02:00"
+              }
+            },
+            "vehicleIdentificationNumber": "XX444XX",
+            "vehicleIdentificationNumberFormatted": "XX444XX",
+            "uuid": "WFg0NDRYWA==",
+            "fuelType": "hybrid",
+            "dateModelCreation": "1998-05-18T00:00:00+02:00",
+            "modelGeneration": "lorem ipsum",
+            "plv": true,
+            "warranty": "unknown",
+            "photo": null
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lyon"
+                }
+              },
+              "title": "Lyon",
+              "slug": "lyon"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Texier",
+        "familyName": "Alix",
+        "uuid": "MDY0OTIwNDQ5Nw==",
+        "phone": "0649204497",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDYzMjQzNDEzMw=="
+          },
+          "company": {
+            "href": "/companies/198c96ea-6983-317c-8f73-efaf0c32d47d"
+          },
+          "vehicle": {
+            "href": "/vehicles/WFg1NTVYWA=="
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/198c96ea-6983-317c-8f73-efaf0c32d47d"
+              }
+            },
+            "name": "Lamy S.A.",
+            "clientRef": "198c96ea-6983-317c-8f73-efaf0c32d47d",
+            "taxId": "204158582592229",
+            "kind": "independent",
+            "code": null,
+            "dateCreated": "2022-05-10T10:44:01+02:00",
+            "dateModified": "2022-05-10T10:44:01+02:00"
+          },
+          "vehicle": {
+            "_links": {
+              "self": {
+                "href": "/vehicles/WFg1NTVYWA=="
+              },
+              "model": {
+                "href": "/models/a6"
+              },
+              "color": {
+                "href": "/colors/black"
+              }
+            },
+            "_embedded": {
+              "model": {
+                "_links": {
+                  "self": {
+                    "href": "/models/a6"
+                  },
+                  "brand": {
+                    "href": "/brands/audi"
+                  }
+                },
+                "_embedded": {
+                  "brand": {
+                    "_links": {
+                      "self": {
+                        "href": "/brands/audi"
+                      }
+                    },
+                    "title": "Audi",
+                    "slug": "audi",
+                    "dateCreated": "2022-05-10T10:43:59+02:00",
+                    "dateModified": "2022-05-10T10:43:59+02:00"
+                  }
+                },
+                "title": "A6",
+                "slug": "a6",
+                "dateModelRelease": "2022-05-10T10:44:00+02:00",
+                "dateCreated": "2022-05-10T10:44:00+02:00",
+                "dateModified": "2022-05-10T10:44:00+02:00"
+              },
+              "color": {
+                "_links": {
+                  "self": {
+                    "href": "/colors/black"
+                  }
+                },
+                "title": "Black",
+                "slug": "black",
+                "dateCreated": "2022-05-10T10:43:59+02:00",
+                "dateModified": "2022-05-10T10:43:59+02:00"
+              }
+            },
+            "vehicleIdentificationNumber": "XX555XX",
+            "vehicleIdentificationNumberFormatted": "XX555XX",
+            "uuid": "WFg1NTVYWA==",
+            "fuelType": "hybrid",
+            "dateModelCreation": "1998-05-18T00:00:00+02:00",
+            "modelGeneration": "lorem ipsum",
+            "plv": true,
+            "warranty": "unknown",
+            "photo": null
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/marseille"
+                }
+              },
+              "title": "Marseille",
+              "slug": "marseille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Launay",
+        "familyName": "Clémence",
+        "uuid": "MDYzMjQzNDEzMw==",
+        "phone": "0632434133",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:01+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc4ODgzNTAwNA=="
+          },
+          "company": {
+            "href": "/companies/MLJGVIWNX"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/MLJGVIWNX"
+              }
+            },
+            "name": "Nguyen Raynaud S.A.S.",
+            "clientRef": "MLJGVIWNX",
+            "taxId": "567121468809117",
+            "kind": "capacity",
+            "code": "NGU-117-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/toulouse"
+                }
+              },
+              "title": "Toulouse",
+              "slug": "toulouse"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Camille",
+        "familyName": "Bernier",
+        "uuid": "MDc4ODgzNTAwNA==",
+        "phone": "0788835004",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "unblocked": 1,
+          "unconfirmed": 1,
+          "password_valid": 1,
+          "email_pending_validation": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc5OTQ0MTU5MA=="
+          },
+          "company": {
+            "href": "/companies/MLJGVIWNX"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/MLJGVIWNX"
+              }
+            },
+            "name": "Nguyen Raynaud S.A.S.",
+            "clientRef": "MLJGVIWNX",
+            "taxId": "567121468809117",
+            "kind": "capacity",
+            "code": "NGU-117-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lille"
+                }
+              },
+              "title": "Lille",
+              "slug": "lille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Menard",
+        "familyName": "Olivier",
+        "uuid": "MDc5OTQ0MTU5MA==",
+        "phone": "0799441590",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDYxNDgxNTU4MA=="
+          },
+          "company": {
+            "href": "/companies/SYXDAJKQL"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/SYXDAJKQL"
+              }
+            },
+            "name": "Masse Leveque S.A.",
+            "clientRef": "SYXDAJKQL",
+            "taxId": "386280357335831",
+            "kind": "capacity",
+            "code": "MAS-831-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/marseille"
+                }
+              },
+              "title": "Marseille",
+              "slug": "marseille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Charpentier",
+        "familyName": "Alain",
+        "uuid": "MDYxNDgxNTU4MA==",
+        "phone": "0614815580",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc0ODg3Mzk1NA=="
+          },
+          "company": {
+            "href": "/companies/SYXDAJKQL"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/SYXDAJKQL"
+              }
+            },
+            "name": "Masse Leveque S.A.",
+            "clientRef": "SYXDAJKQL",
+            "taxId": "386280357335831",
+            "kind": "capacity",
+            "code": "MAS-831-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/marseille"
+                }
+              },
+              "title": "Marseille",
+              "slug": "marseille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Benoit",
+        "familyName": "Benoît",
+        "uuid": "MDc0ODg3Mzk1NA==",
+        "phone": "0748873954",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDY3OTI3NzQ3Mw=="
+          },
+          "company": {
+            "href": "/companies/XYSZEWJKH"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/XYSZEWJKH"
+              }
+            },
+            "name": "Pierre",
+            "clientRef": "XYSZEWJKH",
+            "taxId": "259496921656326",
+            "kind": "capacity",
+            "code": "PIE-326-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/toulouse"
+                }
+              },
+              "title": "Toulouse",
+              "slug": "toulouse"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Peron",
+        "familyName": "Vincent",
+        "uuid": "MDY3OTI3NzQ3Mw==",
+        "phone": "0679277473",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc2NjM3MTU5MQ=="
+          },
+          "company": {
+            "href": "/companies/XYSZEWJKH"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/XYSZEWJKH"
+              }
+            },
+            "name": "Pierre",
+            "clientRef": "XYSZEWJKH",
+            "taxId": "259496921656326",
+            "kind": "capacity",
+            "code": "PIE-326-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lyon"
+                }
+              },
+              "title": "Lyon",
+              "slug": "lyon"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Seguin",
+        "familyName": "Philippe",
+        "uuid": "MDc2NjM3MTU5MQ==",
+        "phone": "0766371591",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc0MTcyMzg2Ng=="
+          },
+          "company": {
+            "href": "/companies/SOCBTKZAR"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/SOCBTKZAR"
+              }
+            },
+            "name": "Weiss",
+            "clientRef": "SOCBTKZAR",
+            "taxId": "752840653270529",
+            "kind": "capacity",
+            "code": "WEI-529-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/marseille"
+                }
+              },
+              "title": "Marseille",
+              "slug": "marseille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Lagarde",
+        "familyName": "Marcel",
+        "uuid": "MDc0MTcyMzg2Ng==",
+        "phone": "0741723866",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDcwMTE0NzIyMg=="
+          },
+          "company": {
+            "href": "/companies/SOCBTKZAR"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/SOCBTKZAR"
+              }
+            },
+            "name": "Weiss",
+            "clientRef": "SOCBTKZAR",
+            "taxId": "752840653270529",
+            "kind": "capacity",
+            "code": "WEI-529-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/paris"
+                }
+              },
+              "title": "Paris",
+              "slug": "paris"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Normand",
+        "familyName": "Noël",
+        "uuid": "MDcwMTE0NzIyMg==",
+        "phone": "0701147222",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDcwNjcyMzA2NA=="
+          },
+          "company": {
+            "href": "/companies/PGMXZHELQ"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/PGMXZHELQ"
+              }
+            },
+            "name": "Lacroix",
+            "clientRef": "PGMXZHELQ",
+            "taxId": "207387084852767",
+            "kind": "capacity",
+            "code": "LAC-767-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lille"
+                }
+              },
+              "title": "Lille",
+              "slug": "lille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Levy",
+        "familyName": "Pauline",
+        "uuid": "MDcwNjcyMzA2NA==",
+        "phone": "0706723064",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDcxMTM1OTg0OQ=="
+          },
+          "company": {
+            "href": "/companies/PGMXZHELQ"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/PGMXZHELQ"
+              }
+            },
+            "name": "Lacroix",
+            "clientRef": "PGMXZHELQ",
+            "taxId": "207387084852767",
+            "kind": "capacity",
+            "code": "LAC-767-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lyon"
+                }
+              },
+              "title": "Lyon",
+              "slug": "lyon"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Bruneau",
+        "familyName": "Pénélope",
+        "uuid": "MDcxMTM1OTg0OQ==",
+        "phone": "0711359849",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc2NjIxMTI3NA=="
+          },
+          "company": {
+            "href": "/companies/LNWTMBPRU"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/LNWTMBPRU"
+              }
+            },
+            "name": "Torres et Fils",
+            "clientRef": "LNWTMBPRU",
+            "taxId": "321751523057778",
+            "kind": "capacity",
+            "code": "TOR-778-001",
+            "dateCreated": "2022-05-10T10:44:01+02:00",
+            "dateModified": "2022-05-10T10:44:01+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/paris"
+                }
+              },
+              "title": "Paris",
+              "slug": "paris"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Voisin",
+        "familyName": "Gabriel",
+        "uuid": "MDc2NjIxMTI3NA==",
+        "phone": "0766211274",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:01+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDY4NDkxNzI0MQ=="
+          },
+          "company": {
+            "href": "/companies/DLNRBGTZA"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/DLNRBGTZA"
+              }
+            },
+            "name": "Blin Alexandre SARL",
+            "clientRef": "DLNRBGTZA",
+            "taxId": "364595392002211",
+            "kind": "capacity",
+            "code": "BLI-211-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lille"
+                }
+              },
+              "title": "Lille",
+              "slug": "lille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Michelle",
+        "familyName": "Dupont",
+        "uuid": "MDY4NDkxNzI0MQ==",
+        "phone": "0684917241",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDY5NDIzMjQ3MQ=="
+          },
+          "company": {
+            "href": "/companies/IXZSMKATH"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/IXZSMKATH"
+              }
+            },
+            "name": "Bodin",
+            "clientRef": "IXZSMKATH",
+            "taxId": "466501724543205",
+            "kind": "capacity",
+            "code": "BOD-205-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lyon"
+                }
+              },
+              "title": "Lyon",
+              "slug": "lyon"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Christelle",
+        "familyName": "Chauvin",
+        "uuid": "MDY5NDIzMjQ3MQ==",
+        "phone": "0694232471",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDY5NjAxMjA1NA=="
+          },
+          "company": {
+            "href": "/companies/IXZSMKATH"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/IXZSMKATH"
+              }
+            },
+            "name": "Bodin",
+            "clientRef": "IXZSMKATH",
+            "taxId": "466501724543205",
+            "kind": "capacity",
+            "code": "BOD-205-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/paris"
+                }
+              },
+              "title": "Paris",
+              "slug": "paris"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Margaret",
+        "familyName": "Dos Santos",
+        "uuid": "MDY5NjAxMjA1NA==",
+        "phone": "0696012054",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc0MTUxNzUyNw=="
+          },
+          "company": {
+            "href": "/companies/MEJISPUFX"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/MEJISPUFX"
+              }
+            },
+            "name": "Guyon Faivre et Fils",
+            "clientRef": "MEJISPUFX",
+            "taxId": "234171349261406",
+            "kind": "capacity",
+            "code": "GUY-406-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/toulouse"
+                }
+              },
+              "title": "Toulouse",
+              "slug": "toulouse"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Laurence",
+        "familyName": "Millet",
+        "uuid": "MDc0MTUxNzUyNw==",
+        "phone": "0741517527",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc5MDkzNDk3Nw=="
+          },
+          "company": {
+            "href": "/companies/MEJISPUFX"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/MEJISPUFX"
+              }
+            },
+            "name": "Guyon Faivre et Fils",
+            "clientRef": "MEJISPUFX",
+            "taxId": "234171349261406",
+            "kind": "capacity",
+            "code": "GUY-406-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lyon"
+                }
+              },
+              "title": "Lyon",
+              "slug": "lyon"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Timothée",
+        "familyName": "Simon",
+        "uuid": "MDc5MDkzNDk3Nw==",
+        "phone": "0790934977",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc4MzM4NDM3OQ=="
+          },
+          "company": {
+            "href": "/companies/PGWQMKVAR"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/PGWQMKVAR"
+              }
+            },
+            "name": "Bousquet",
+            "clientRef": "PGWQMKVAR",
+            "taxId": "662414338281094",
+            "kind": "capacity",
+            "code": "BOU-094-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lyon"
+                }
+              },
+              "title": "Lyon",
+              "slug": "lyon"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Thomas",
+        "familyName": "Clement",
+        "uuid": "MDc4MzM4NDM3OQ==",
+        "phone": "0783384379",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDYwNDcwODI4MA=="
+          },
+          "company": {
+            "href": "/companies/PGWQMKVAR"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/PGWQMKVAR"
+              }
+            },
+            "name": "Bousquet",
+            "clientRef": "PGWQMKVAR",
+            "taxId": "662414338281094",
+            "kind": "capacity",
+            "code": "BOU-094-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lille"
+                }
+              },
+              "title": "Lille",
+              "slug": "lille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Jacqueline",
+        "familyName": "Da Silva",
+        "uuid": "MDYwNDcwODI4MA==",
+        "phone": "0604708280",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDc3NDk5NTM2MQ=="
+          },
+          "company": {
+            "href": "/companies/TQPYLZXEM"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/TQPYLZXEM"
+              }
+            },
+            "name": "Lambert",
+            "clientRef": "TQPYLZXEM",
+            "taxId": "629156946443010",
+            "kind": "capacity",
+            "code": "LAM-010-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/lille"
+                }
+              },
+              "title": "Lille",
+              "slug": "lille"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Laurent",
+        "familyName": "Perrier",
+        "uuid": "MDc3NDk5NTM2MQ==",
+        "phone": "0774995361",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDY3Mzc2NzY4NA=="
+          },
+          "company": {
+            "href": "/companies/TQPYLZXEM"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/TQPYLZXEM"
+              }
+            },
+            "name": "Lambert",
+            "clientRef": "TQPYLZXEM",
+            "taxId": "629156946443010",
+            "kind": "capacity",
+            "code": "LAM-010-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/bordeaux"
+                }
+              },
+              "title": "Bordeaux",
+              "slug": "bordeaux"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Marianne",
+        "familyName": "Pages",
+        "uuid": "MDY3Mzc2NzY4NA==",
+        "phone": "0673767684",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/drivers/MDY3MTEyMDAwOA=="
+          },
+          "company": {
+            "href": "/companies/OHVKREICP"
+          }
+        },
+        "_embedded": {
+          "company": {
+            "_links": {
+              "self": {
+                "href": "/companies/OHVKREICP"
+              }
+            },
+            "name": "Vidal Vasseur SARL",
+            "clientRef": "OHVKREICP",
+            "taxId": "567699917558815",
+            "kind": "capacity",
+            "code": "VID-815-001",
+            "dateCreated": "2022-05-10T10:44:00+02:00",
+            "dateModified": "2022-05-10T10:44:00+02:00"
+          }
+        },
+        "cities": [
+          {
+            "city": {
+              "_links": {
+                "self": {
+                  "href": "/cities/toulouse"
+                }
+              },
+              "title": "Toulouse",
+              "slug": "toulouse"
+            },
+            "main": true
+          }
+        ],
+        "givenName": "Suzanne",
+        "familyName": "Etienne",
+        "uuid": "MDY3MTEyMDAwOA==",
+        "phone": "0671120008",
+        "device": null,
+        "locale": "fr",
+        "status": {
+          "confirmed": 1,
+          "unblocked": 1,
+          "email_valid": 1,
+          "password_valid": 1
+        },
+        "vehicleType": "vtc",
+        "lastLoginDate": "2022-05-10T10:44:00+02:00",
+        "dateCreated": "2022-05-10T10:44:00+02:00",
+        "dateModified": "2022-05-10T10:44:00+02:00"
+      }
+    ]
+  }
+}

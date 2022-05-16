@@ -1,0 +1,158 @@
+{
+  "_links": {
+    "self": {
+      "href": "/users?page=1"
+    },
+    "first": {
+      "href": "/users?page=1"
+    },
+    "last": {
+      "href": "/users?page=1"
+    },
+    "item": [
+      {
+        "href": "/users/70081b35-3de9-4112-9438-f87d0f12bdde"
+      },
+      {
+        "href": "/users/d5f23798-9475-4fdf-8e6c-b0af4a3f5b71"
+      },
+      {
+        "href": "/users/YmVuamFtaW4uYmxpbkBnbWFpbC5jb20="
+      },
+      {
+        "href": "/users/bGF1cmUuZ29tZXNAZ21haWwuY29t"
+      },
+      {
+        "href": "/users/dGhpZXJyeS5sZWJyZXRvbkBnbWFpbC5jb20="
+      },
+      {
+        "href": "/users/bWFkZWxlaW5lLmhhbW9uQGdtYWlsLmNvbQ=="
+      },
+      {
+        "href": "/users/cGF0cmljay5iZXJnZXJAZ21haWwuY29t"
+      },
+      {
+        "href": "/users/c2FiaW5lLmxhcm9jaGVAZ21haWwuY29t"
+      },
+      {
+        "href": "/users/Z2lsYmVydC5tYXJjZWxsZSBnaWxsZXNAZ21haWwuY29t"
+      }
+    ]
+  },
+  "totalItems": 10,
+  "itemsPerPage": 10,
+  "_embedded": {
+    "item": [
+      {
+        "_links": {
+          "self": {
+            "href": "/users/d5f23798-9475-4fdf-8e6c-b0af4a3f5b71"
+          }
+        },
+        "familyName": "Doe",
+        "givenName": "Jane",
+        "slug": "d5f23798-9475-4fdf-8e6c-b0af4a3f5b71",
+        "username": "jane.doe@gmail.com"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/users/YmVuamFtaW4uYmxpbkBnbWFpbC5jb20="
+          }
+        },
+        "familyName": "Blin",
+        "givenName": "Benjamin",
+        "slug": "YmVuamFtaW4uYmxpbkBnbWFpbC5jb20=",
+        "username": "benjamin.blin@gmail.com"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/users/70081b35-3de9-4112-9438-f87d0f12bdde"
+          }
+        },
+        "familyName": "Doe",
+        "givenName": "John",
+        "slug": "70081b35-3de9-4112-9438-f87d0f12bdde",
+        "username": "john.doe@gmail.com"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/users/bGF1cmUuZ29tZXNAZ21haWwuY29t"
+          }
+        },
+        "familyName": "Gomes",
+        "givenName": "Laure",
+        "slug": "bGF1cmUuZ29tZXNAZ21haWwuY29t",
+        "username": "laure.gomes@gmail.com"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/users/dGhpZXJyeS5sZWJyZXRvbkBnbWFpbC5jb20="
+          }
+        },
+        "familyName": "Lebreton",
+        "givenName": "Thierry",
+        "slug": "dGhpZXJyeS5sZWJyZXRvbkBnbWFpbC5jb20=",
+        "username": "thierry.lebreton@gmail.com"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/users/bWFkZWxlaW5lLmhhbW9uQGdtYWlsLmNvbQ=="
+          }
+        },
+        "familyName": "Hamon",
+        "givenName": "Madeleine",
+        "slug": "bWFkZWxlaW5lLmhhbW9uQGdtYWlsLmNvbQ==",
+        "username": "madeleine.hamon@gmail.com"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/users/cGF0cmljay5iZXJnZXJAZ21haWwuY29t"
+          }
+        },
+        "familyName": "Berger",
+        "givenName": "Patrick",
+        "slug": "cGF0cmljay5iZXJnZXJAZ21haWwuY29t",
+        "username": "patrick.berger@gmail.com"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/users/c2FiaW5lLmxhcm9jaGVAZ21haWwuY29t"
+          }
+        },
+        "familyName": "Laroche",
+        "givenName": "Sabine",
+        "slug": "c2FiaW5lLmxhcm9jaGVAZ21haWwuY29t",
+        "username": "sabine.laroche@gmail.com"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/users/Z2lsYmVydC5tYXJjZWxsZSBnaWxsZXNAZ21haWwuY29t"
+          }
+        },
+        "familyName": "Marcelle Gilles",
+        "givenName": "Gilbert",
+        "slug": "Z2lsYmVydC5tYXJjZWxsZSBnaWxsZXNAZ21haWwuY29t",
+        "username": "gilbert.marcelle gilles@gmail.com"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/users/MDYyMjkyMDg1NQ=="
+          }
+        },
+        "familyName": "Gillet",
+        "givenName": "Julie",
+        "slug": "MDYyMjkyMDg1NQ==",
+        "username": "0622920855"
+      }
+    ]
+  }
+}
