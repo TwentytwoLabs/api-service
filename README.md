@@ -17,7 +17,7 @@ This component rely on well known interfaces that discribe:
 This library can be easily installed via composer
 
 ```
-composer require symfony-labs/api-service
+composer require twentytwo-labs/api-service
 ```
 
 ## Usage
