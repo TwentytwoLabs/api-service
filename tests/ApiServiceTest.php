@@ -7,15 +7,16 @@ namespace TwentytwoLabs\Api\Service\Tests;
 use Assert\AssertionFailedException;
 use GuzzleHttp\Psr7\Request;
 use Http\Client\HttpAsyncClient;
-use Http\Client\HttpClient;
 use Http\Message\MessageFactory;
 use Http\Message\UriFactory;
 use Http\Promise\FulfilledPromise;
 use Http\Promise\Promise;
 use PHPUnit\Framework\TestCase;
+use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriInterface;
+use Psr\Log\LoggerInterface;
 use Rize\UriTemplate;
 use Symfony\Component\Serializer\SerializerInterface;
 use TwentytwoLabs\Api\Definition\Parameter;
@@ -44,6 +45,7 @@ class ApiServiceTest extends TestCase
     private MessageFactory $messageFactory;
     private MessageValidator $messageValidator;
     private SerializerInterface $serializer;
+    private LoggerInterface $logger;
     private array $config;
 
     protected function setUp(): void
@@ -51,10 +53,11 @@ class ApiServiceTest extends TestCase
         $this->schema = $this->createMock(Schema::class);
         $this->uriFactory = $this->createMock(UriFactory::class);
         $this->uriTemplate = $this->createMock(UriTemplate::class);
-        $this->httpClient = $this->createMock(HttpClient::class);
+        $this->httpClient = $this->createMock(ClientInterface::class);
         $this->messageFactory = $this->createMock(MessageFactory::class);
         $this->messageValidator = $this->createMock(MessageValidator::class);
         $this->serializer = $this->createMock(SerializerInterface::class);
+        $this->logger = $this->createMock(LoggerInterface::class);
         $this->config = [];
     }
 
@@ -228,7 +231,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('POST');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('POST');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(201)->willReturn($responseDefinition);
@@ -332,7 +335,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('POST');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('POST');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(201)->willReturn($responseDefinition);
@@ -436,7 +439,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('POST');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('POST');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(500)->willReturn($responseDefinition);
@@ -551,7 +554,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['multipart/form-data'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('POST');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('POST');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/login_check');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(200)->willReturn($responseDefinition);
@@ -666,7 +669,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['multipart/form-data'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('POST');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('POST');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/login_check');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(500)->willReturn($responseDefinition);
@@ -765,7 +768,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users/{identifier}');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(200)->willReturn($responseDefinition);
@@ -785,7 +788,7 @@ class ApiServiceTest extends TestCase
                 'GET',
                 $uri,
                 ['Content-Type' => 'application/json', 'Accept' => 'application/json'],
-                []
+                null
             )
             ->willReturn($request)
         ;
@@ -863,7 +866,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users/{identifier}');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(200)->willReturn($responseDefinition);
@@ -883,7 +886,7 @@ class ApiServiceTest extends TestCase
                 'GET',
                 $uri,
                 ['Content-Type' => 'application/json', 'Accept' => 'application/json'],
-                []
+                null
             )
             ->willReturn($request)
         ;
@@ -961,7 +964,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users/{identifier}');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(500)->willReturn($responseDefinition);
@@ -981,7 +984,7 @@ class ApiServiceTest extends TestCase
                 'GET',
                 $uri,
                 ['Content-Type' => 'application/json', 'Accept' => 'application/json'],
-                []
+                null
             )
             ->willReturn($request)
         ;
@@ -1062,7 +1065,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn($method);
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn($method);
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users/{identifier}');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(200)->willReturn($responseDefinition);
@@ -1174,7 +1177,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn($method);
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn($method);
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users/{identifier}');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(500)->willReturn($responseDefinition);
@@ -1291,7 +1294,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('DELETE');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('DELETE');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users/{identifier}');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(204)->willReturn($responseDefinition);
@@ -1380,7 +1383,7 @@ class ApiServiceTest extends TestCase
         $requestDefinition->expects($this->once())->method('getOperationId')->willReturn('getUserCollection');
         $requestDefinition->expects($this->once())->method('getContentTypes')->willReturn(['application/hal+json', 'application/json']);
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->never())->method('getMethod');
+        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/hal+json', 'application/ld+json']);
         $requestDefinition->expects($this->never())->method('getPathTemplate');
         $requestDefinition->expects($this->never())->method('getResponseDefinition');
@@ -1441,7 +1444,7 @@ class ApiServiceTest extends TestCase
                 ->willReturn(['application/hal+json', 'application/json'])
             ;
             $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-            $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+            $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
             $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json', 'application/ld+json']);
             $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
             $requestDefinition->expects($this->never())->method('getResponseDefinition');
@@ -1461,7 +1464,7 @@ class ApiServiceTest extends TestCase
                     'GET',
                     $uri,
                     ['Content-Type' => 'application/hal+json', 'Accept' => 'application/json'],
-                    []
+                    null
                 )
                 ->willReturn($request)
             ;
@@ -1520,7 +1523,7 @@ class ApiServiceTest extends TestCase
                 ->willReturn(['application/hal+json', 'application/json'])
             ;
             $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-            $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+            $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
             $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json', 'application/ld+json']);
             $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
             $requestDefinition->expects($this->never())->method('getResponseDefinition');
@@ -1540,7 +1543,7 @@ class ApiServiceTest extends TestCase
                     'GET',
                     $uri,
                     ['Content-Type' => 'application/hal+json', 'Accept' => 'application/json'],
-                    []
+                    null
                 )
                 ->willReturn($request)
             ;
@@ -1603,7 +1606,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/hal+json', 'application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json', 'application/ld+json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(200)->willReturn($responseDefinition);
@@ -1623,7 +1626,7 @@ class ApiServiceTest extends TestCase
                 'GET',
                 $uri,
                 ['Content-Type' => 'application/hal+json', 'Accept' => 'application/json'],
-                []
+                null
             )
             ->willReturn($request)
         ;
@@ -1697,7 +1700,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/hal+json', 'application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json', 'application/ld+json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(200)->willReturn($responseDefinition);
@@ -1717,7 +1720,7 @@ class ApiServiceTest extends TestCase
                 'GET',
                 $uri,
                 ['Content-Type' => 'application/hal+json', 'Accept' => 'application/json'],
-                []
+                null
             )
             ->willReturn($request)
         ;
@@ -1790,7 +1793,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/hal+json', 'application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json', 'application/ld+json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(200)->willReturn($responseDefinition);
@@ -1810,7 +1813,7 @@ class ApiServiceTest extends TestCase
                 'GET',
                 $uri,
                 ['Content-Type' => 'application/hal+json', 'Accept' => 'application/json'],
-                []
+                null
             )
             ->willReturn($request)
         ;
@@ -1883,7 +1886,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/hal+json', 'application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json', 'application/ld+json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(200)->willReturn($responseDefinition);
@@ -1903,7 +1906,7 @@ class ApiServiceTest extends TestCase
                 'GET',
                 $uri,
                 ['Content-Type' => 'application/hal+json', 'Accept' => 'application/json'],
-                []
+                null
             )
             ->willReturn($request)
         ;
@@ -1963,7 +1966,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/hal+json', 'application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json', 'application/ld+json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(400)->willReturn($responseDefinition);
@@ -1990,7 +1993,7 @@ class ApiServiceTest extends TestCase
                 'GET',
                 $uri,
                 ['Content-Type' => 'application/hal+json', 'Accept' => 'application/json'],
-                []
+                null
             )
             ->willReturn($request)
         ;
@@ -2105,7 +2108,7 @@ class ApiServiceTest extends TestCase
             ->willReturn(['application/hal+json', 'application/json'])
         ;
         $requestDefinition->expects($this->once())->method('getRequestParameters')->willReturn($requestParameters);
-        $requestDefinition->expects($this->once())->method('getMethod')->willReturn('GET');
+        $requestDefinition->expects($this->exactly(2))->method('getMethod')->willReturn('GET');
         $requestDefinition->expects($this->once())->method('getAccepts')->willReturn(['application/json', 'application/ld+json']);
         $requestDefinition->expects($this->once())->method('getPathTemplate')->willReturn('/users');
         $requestDefinition->expects($this->once())->method('getResponseDefinition')->with(200)->willReturn($responseDefinition);
@@ -2125,7 +2128,7 @@ class ApiServiceTest extends TestCase
                 'GET',
                 $uri,
                 ['Content-Type' => 'application/hal+json', 'Accept' => 'application/json'],
-                []
+                null
             )
             ->willReturn($request)
         ;
@@ -2192,6 +2195,7 @@ class ApiServiceTest extends TestCase
             $this->schema,
             $this->messageValidator,
             $this->serializer,
+            $this->logger,
             $this->config
         );
     }

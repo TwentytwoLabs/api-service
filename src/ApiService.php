@@ -43,7 +43,7 @@ class ApiService
     private UriInterface $baseUri;
     private Schema $schema;
     private MessageValidator $messageValidator;
-    private ClientInterface $client;
+    private ClientInterface|HttpAsyncClient $client;
     private MessageFactory $messageFactory;
     private UriTemplate $uriTemplate;
     private UriFactory $uriFactory;
@@ -54,7 +54,7 @@ class ApiService
     public function __construct(
         UriFactory $uriFactory,
         UriTemplate $uriTemplate,
-        ClientInterface $client,
+        ClientInterface|HttpAsyncClient $client,
         MessageFactory $messageFactory,
         Schema $schema,
         MessageValidator $messageValidator,
