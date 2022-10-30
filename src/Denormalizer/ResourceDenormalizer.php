@@ -64,11 +64,15 @@ class ResourceDenormalizer implements DenormalizerInterface
 
     private function getSchemaType(\stdClass $schema): string
     {
-        if (true === isset($schema->type)) {
+        if (isset($schema->{'x-type'})) {
+            return $schema->{'x-type'};
+        }
+
+        if (isset($schema->type)) {
             return $schema->type;
         }
 
-        if (true === isset($schema->allOf[0]->type)) {
+        if (isset($schema->allOf[0]->type)) {
             return $schema->allOf[0]->type;
         }
 

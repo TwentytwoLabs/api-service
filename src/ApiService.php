@@ -5,18 +5,20 @@ declare(strict_types=1);
 namespace TwentytwoLabs\Api\Service;
 
 use Assert\Assertion;
-use GuzzleHttp\Psr7\Response;
 use Http\Client\HttpAsyncClient;
-use Http\Client\HttpClient;
 use Http\Message\MessageFactory;
 use Http\Message\UriFactory;
 use Http\Promise\Promise;
+use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
+use Psr\Log\LoggerInterface;
 use Rize\UriTemplate;
 use Symfony\Component\Serializer\SerializerInterface;
 use TwentytwoLabs\Api\Decoder\DecoderUtils;
+use TwentytwoLabs\Api\Definition\Parameter;
+use TwentytwoLabs\Api\Definition\Parameters;
 use TwentytwoLabs\Api\Definition\RequestDefinition;
 use TwentytwoLabs\Api\Definition\ResponseDefinition;
 use TwentytwoLabs\Api\Schema;
@@ -26,9 +28,6 @@ use TwentytwoLabs\Api\Service\Resource\ErrorInterface;
 use TwentytwoLabs\Api\Service\Resource\ResourceInterface;
 use TwentytwoLabs\Api\Validator\MessageValidator;
 
-/**
- * Class ApiService.
- */
 class ApiService
 {
     public const DEFAULT_CONFIG = [
@@ -44,25 +43,23 @@ class ApiService
     private UriInterface $baseUri;
     private Schema $schema;
     private MessageValidator $messageValidator;
-
-    /**
-     * @var HttpAsyncClient|HttpClient
-     */
-    private $client;
+    private ClientInterface $client;
     private MessageFactory $messageFactory;
     private UriTemplate $uriTemplate;
     private UriFactory $uriFactory;
     private SerializerInterface $serializer;
+    private ?LoggerInterface $logger;
     private array $config;
 
     public function __construct(
         UriFactory $uriFactory,
         UriTemplate $uriTemplate,
-        $client,
+        ClientInterface $client,
         MessageFactory $messageFactory,
         Schema $schema,
         MessageValidator $messageValidator,
         SerializerInterface $serializer,
+        ?LoggerInterface $logger = null,
         array $config = []
     ) {
         $this->uriFactory = $uriFactory;
@@ -72,6 +69,7 @@ class ApiService
         $this->client = $client;
         $this->messageFactory = $messageFactory;
         $this->serializer = $serializer;
+        $this->logger = $logger;
         $this->config = $this->getConfig($config);
         $this->baseUri = $this->getBaseUri();
     }
@@ -80,9 +78,11 @@ class ApiService
     {
         $requestDefinition = $this->schema->getRequestDefinition($operationId);
         $request = $this->createRequestFromDefinition($requestDefinition, $params);
+        $this->logger->info('Sending request:', ['request' => $request]);
         $this->validateRequest($request, $requestDefinition);
 
         $response = $this->client->sendRequest($request);
+        $this->logger->info('Received response:', ['response' => $response]);
         $this->validateResponse($response, $requestDefinition);
 
         return $this->getDataFromResponse(
@@ -140,7 +140,7 @@ class ApiService
         return $queryParameters;
     }
 
-    private static function transformArray(&$queryParameters, $key, $item)
+    private static function transformArray(&$queryParameters, $key, $item): bool
     {
         foreach ($item as $property => $value) {
             // if array like ["value 1", "value 2"], do not transform
@@ -201,17 +201,74 @@ class ApiService
         return $config;
     }
 
+    private function getDefaultValues(Parameters $requestParameters): array
+    {
+        $path = [];
+        $query = [];
+        $headers = [];
+        $body = null;
+        $formData = [];
+
+        /** @var Parameter $parameter */
+        foreach ($requestParameters as $name => $parameter) {
+            switch ($parameter->getLocation()) {
+                case 'path':
+                    if (!empty($parameter->getSchema()->default)) {
+                        $path[$name] = $parameter->getSchema()->default;
+                    }
+                    break;
+                case 'query':
+                    if (!empty($parameter->getSchema()->default)) {
+                        $query[$name] = $parameter->getSchema()->default;
+                    }
+                    break;
+                case 'header':
+                    if (!empty($parameter->getSchema()->default)) {
+                        $headers[$name] = $parameter->getSchema()->default;
+                    }
+                    break;
+                case 'formData':
+                    if (!empty($parameter->getSchema()->default)) {
+                        $formData[$name] = sprintf('%s=%s', $name, $parameter->getSchema()->default);
+                    }
+                    break;
+                case 'body':
+                    if (!empty($parameter->getSchema()->properties)) {
+                        $body = array_filter(array_map(function (array $params) {
+                            return $params['default'] ?? null;
+                        }, json_decode(json_encode($parameter->getSchema()->properties), true)));
+                    }
+                    break;
+            }
+        }
+
+        return [$path, $query, $headers, $body, $formData];
+    }
+
     private function createRequestFromDefinition(RequestDefinition $definition, array $params): RequestInterface
     {
         $contentType = $definition->getContentTypes()[0] ?? 'application/json';
         $requestParameters = $definition->getRequestParameters();
-        list($path, $query, $body, $formData) = [[], [], [], []];
-        $headers = ['Content-Type' => $contentType, 'Accept' => $definition->getAccepts()[0] ?? 'application/json'];
+        list($path, $query, $headers, $body, $formData) = [[], [], [], null, []];
+        if ('POST' === $definition->getMethod()) {
+            list($path, $query, $headers, $body, $formData) = $this->getDefaultValues($requestParameters);
+        }
+
+        $headers = array_merge(
+            $headers,
+            ['Content-Type' => $contentType, 'Accept' => $definition->getAccepts()[0] ?? 'application/json']
+        );
 
         foreach ($params as $name => $value) {
             $requestParameter = $requestParameters->getByName($name);
             if (null === $requestParameter) {
-                throw new \InvalidArgumentException(sprintf('%s is not a defined request parameter for operationId %s', $name, $definition->getOperationId()));
+                throw new \InvalidArgumentException(
+                    sprintf(
+                        '%s is not a defined request parameter for operationId %s',
+                        $name,
+                        $definition->getOperationId()
+                    )
+                );
             }
 
             switch ($requestParameter->getLocation()) {
@@ -225,7 +282,7 @@ class ApiService
                     $headers[$name] = $value;
                     break;
                 case 'body':
-                    $body = $this->serializeRequestBody($value, $contentType);
+                    $body = $this->serializeRequestBody(array_merge($body ?? [], $value), $contentType);
                     break;
                 case 'formData':
                     $formData[$name] = sprintf('%s=%s', $name, $value);
@@ -258,8 +315,11 @@ class ApiService
         return $this->serializer->serialize($decodedBody, DecoderUtils::extractFormatFromContentType($contentType));
     }
 
-    private function getDataFromResponse(ResponseInterface $response, ResponseDefinition $definition, RequestInterface $request)
-    {
+    private function getDataFromResponse(
+        ResponseInterface $response,
+        ResponseDefinition $definition,
+        RequestInterface $request
+    ) {
         if (true === $this->config['returnResponse']) {
             return $response;
         }
